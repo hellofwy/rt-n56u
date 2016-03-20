@@ -1,3 +1,27 @@
+### Newifi mini custom firmware using padavan/rt-n56u ###
+
+*Use at your own risk.*
+I don't have solid knowledge about routers, so there may be errors in my changes. 
+
+This project is forked from padavan/rt-n56u, and the `newifi_mini` branch is created for Newifi mini router. Only Newifi mini'specific board settings are added, nothing more.
+
+GPIO settings of LED, USB and RESET are from [hiboyhiboyhiboy's firmware](www.right.com.cn/forum/thread-161324-1-1.html)  which also based on padavan's firmware.
+
+### How to compile ###
+After compiled the tool chains following the [HowToMakeFirmware's](https://bitbucket.org/padavan/rt-n56u/wiki/EN/HowToMakeFirmware) instructions, compile the firmware for newifi mini with:
+
+```
+cd /opt/rt-n56u/trunk
+cp configs/templates/newifi_mini.config .config
+./clear_tree
+./build_firmware
+```
+The firmware will be in the `images` folder.
+You can customize the components of firmware by editing the `newifi_mini.config`.
+
+
+--------------------The original README is below:--------------------
+
 # README #
 
 Welcome to the rt-n56u project
